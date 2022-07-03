@@ -13,7 +13,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row" v-if="len">
             <div class="col d-flex justify-content-evenly">
                 <div class="h1">
                     {{ pair.from }}
@@ -22,6 +22,11 @@
                 <div class="h1">
                     {{ pair.to }}
                 </div>
+            </div>
+        </div>
+        <div class="row" v-else>
+            <div class="col d-flex justify-content-evenly">
+                No names provided
             </div>
         </div>
 
