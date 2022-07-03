@@ -48,7 +48,11 @@
                     :max="len - 1"
                 />
             </div>
-            <div class="col-auto">{{ +counter + 1 }}/{{ len }}</div>
+
+            <div v-if="len != 0" class="col-auto">
+                {{ +counter + 1 }}/{{ len }}
+            </div>
+            <div v-else class="col-auto">{{ 0 }}/{{ 0 }}</div>
         </div>
     </div>
 
