@@ -16,8 +16,8 @@ jobs:
         with:
           node-version: '16.x'
 
-      - run: yarn install --frozen-lockfile
-      - run: yarn build
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run build
 
       - name: Deploy
         uses: s0/git-publish-subdir-action@develop
