@@ -43,7 +43,7 @@ export const build = (n: number) => {
             const vb = memory[b].size;
 
             if (va != vb) return va - vb;
-            return b - a;
+            return Math.random() - 0.5;
         });
 
         for (const nxt of next) {
