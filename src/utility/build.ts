@@ -6,24 +6,26 @@ export const build = (n: number) => {
         cur: number;
         res: number[];
     }[] = [];
-    for (let i = 1; i < n; ++i) {
-        const memory: { [key: number]: Set<number> } = {};
-        memory[0] = new Set(
-            [...new Array(n)].map((_, x) => x).filter((x) => x !== 0 && x !== i)
-        );
 
-        for (let j = 1; j < n; ++j) {
-            memory[j] = new Set(
-                [...new Array(n)].map((_, x) => x).filter((x) => x !== j)
+    (() => {
+        const memory: { [key: number]: Set<number> } = {};
+        const res: number[] = [];
+        for (let i = 0; i < n; ++i) {
+            memory[i] = new Set(
+                [...new Array(n)]
+                    .map((_, x) => x)
+                    .filter((x) => x != i && x != i + 1)
             );
+
+            res.push(i);
         }
 
         stack.push({
             memory,
-            cur: i,
-            res: [0, i],
+            cur: n - 1,
+            res,
         });
-    }
+    })();
 
     while (stack.length) {
         const top = stack.pop();
@@ -46,7 +48,7 @@ export const build = (n: number) => {
             return Math.random() - 0.5;
         });
 
-        console.log(next.map((a) => ({ a, l: memory[a].size })));
+        // console.log(next.map((a) => ({ a, l: memory[a].size })));
 
         for (const nxt of next) {
             const newMemory = Object.assign({}, memory);
