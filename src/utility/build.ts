@@ -44,7 +44,7 @@ export const build = (n: number) => {
             const va = memory[a].size;
             const vb = memory[b].size;
 
-            if (vb != va) return vb - va;
+            if (vb != va) return va - vb;
             return Math.random() - 0.5;
         });
 
