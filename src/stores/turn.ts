@@ -6,7 +6,7 @@ export const useTurnStore = defineStore({
 
     state() {
         return {
-            names: ["Оля", "Ваня", "Коля"],
+            names: ["Jim", "Tim", "Kim"],
             turn: build(3),
             counter: 0,
         };
