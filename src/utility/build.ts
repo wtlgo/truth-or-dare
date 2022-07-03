@@ -42,9 +42,11 @@ export const build = (n: number) => {
             const va = memory[a].size;
             const vb = memory[b].size;
 
-            if (va != vb) return va - vb;
+            if (vb != va) return vb - va;
             return Math.random() - 0.5;
         });
+
+        console.log(next.map((a) => ({ a, l: memory[a].size })));
 
         for (const nxt of next) {
             const newMemory = Object.assign({}, memory);
