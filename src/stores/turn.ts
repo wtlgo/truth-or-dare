@@ -33,11 +33,8 @@ export const useTurnStore = defineStore({
 
     actions: {
         async setNames(names: string[]) {
-            if (new Set(this.turn).size !== names.length) {
-                this.turn = build(names.length);
-            }
-
             this.names = names;
+            this.turn = build(names.length);
             this.counter = 0;
         },
 
