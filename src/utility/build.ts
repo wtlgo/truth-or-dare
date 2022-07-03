@@ -38,11 +38,13 @@ export const build = (n: number) => {
             return res;
         }
 
-        const next = [...memory[cur]];
-        for (let i = next.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [next[i], next[j]] = [next[j], next[i]];
-        }
+        const next = [...memory[cur]].sort((a, b) => {
+            const va = memory[a].size;
+            const vb = memory[b].size;
+
+            if (va != vb) return va - vb;
+            return Math.random() - 0.5;
+        });
 
         for (const nxt of next) {
             const newMemory = Object.assign({}, memory);
