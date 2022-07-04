@@ -1,9 +1,17 @@
 <style>
 @import "bootstrap";
+
+body,
+html,
+#app {
+    height: 100%;
+}
 </style>
 
 <template>
-    <div class="container mt-2">
+    <div
+        class="container pt-2 h-100 d-flex flex-column justify-content-between"
+    >
         <div class="row">
             <div class="col-auto">
                 <ChangeLanguage />
@@ -34,32 +42,36 @@
         </div>
 
         <div class="row p-2">
-            <div class="col d-flex justify-content-between">
-                <button class="btn btn-primary" @click="turn.back">
-                    {{ t("button.back") }}
-                </button>
-                <button class="btn btn-primary" @click="turn.next">
-                    {{ t("button.next") }}
-                </button>
-            </div>
-        </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col d-flex justify-content-between">
+                        <button class="btn btn-primary" @click="turn.back">
+                            {{ t("button.back") }}
+                        </button>
+                        <button class="btn btn-primary" @click="turn.next">
+                            {{ t("button.next") }}
+                        </button>
+                    </div>
+                </div>
 
-        <div class="row p-2">
-            <div class="col">
-                <input
-                    v-model="counter"
-                    type="range"
-                    class="form-range"
-                    step="1"
-                    min="0"
-                    :max="len - 1"
-                />
-            </div>
+                <div class="row p-2">
+                    <div class="col">
+                        <input
+                            v-model="counter"
+                            type="range"
+                            class="form-range"
+                            step="1"
+                            min="0"
+                            :max="len - 1"
+                        />
+                    </div>
 
-            <div v-if="len != 0" class="col-auto">
-                {{ +counter + 1 }} / {{ len }}
+                    <div v-if="len != 0" class="col-auto">
+                        {{ +counter + 1 }} / {{ len }}
+                    </div>
+                    <div v-else class="col-auto">0 / 0</div>
+                </div>
             </div>
-            <div v-else class="col-auto">0 / 0</div>
         </div>
     </div>
 
