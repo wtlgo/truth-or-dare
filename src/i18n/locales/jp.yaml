@@ -1,0 +1,29 @@
+language:
+    name: 日本語
+
+message:
+    html:
+        asks: |
+            <div class='h1'>
+                {from}<span class='h5 align-self-center'>が<span>
+            </div>
+
+            <div class='h1'>
+                {to}<span class='h5 align-self-center'>に<span>
+            </div>
+
+            <div class='h5 align-self-center'>
+                聞きます
+            </div>
+
+    no-names-provided: 名前はありません
+    edit-names: 名前を編集します
+
+button:
+    back: 戻る
+    next: 継続する
+    edit-names: 名前を編集します
+    remove: 削除する
+    add: 追加
+    reset: リセット
+    save-changes: 変更内容を保存

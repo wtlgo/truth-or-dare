@@ -1,0 +1,27 @@
+language:
+    name: Русский
+
+message:
+    html:
+        asks: |
+            <div class='h1'>
+                {from}
+            </div>
+            <div class='h5 align-self-center'>
+                спрашивает
+            </div>
+            <div class='h1'>
+                {to}
+            </div>
+
+    no-names-provided: Нет имен
+    edit-names: Редактировать Имена
+
+button:
+    back: Назад
+    next: Далее
+    edit-names: Редактировать Имена
+    remove: Удалить
+    add: Добавить
+    reset: Сбросить
+    save-changes: Сохранить Изменения

@@ -1,0 +1,29 @@
+language:
+    name: Türkçe
+
+message:
+    html:
+        asks: |
+            <div class='h1'>
+                {from}<span class='h5 align-self-center'>,<span>
+            </div>
+
+            <div class='h1'>
+                {to}<span class='h5 align-self-center'>'a/e<span>
+            </div>
+
+            <div class='h5 align-self-center'>
+                soruyor
+            </div>
+
+    no-names-provided: İsimler Yok
+    edit-names: İsimleri Değiştir
+
+button:
+    back: Geri
+    next: Devam
+    edit-names: İsimleri Değiştir
+    remove: Sil
+    add: Ekle
+    reset: Sıfırla
+    save-changes: Kaydet

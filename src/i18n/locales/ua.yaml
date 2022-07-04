@@ -1,0 +1,27 @@
+language:
+    name: Українська
+
+message:
+    html:
+        asks: |
+            <div class='h1'>
+                {from}
+            </div>
+            <div class='h5 align-self-center'>
+                питає
+            </div>
+            <div class='h1'>
+                {to}
+            </div>
+
+    no-names-provided: Нема Імен
+    edit-names: Редагувати Імена
+
+button:
+    back: Назад
+    next: Далі
+    edit-names: Редагувати Імена
+    remove: Видалити
+    add: Додати
+    reset: Скинути
+    save-changes: Зберегти Зміни

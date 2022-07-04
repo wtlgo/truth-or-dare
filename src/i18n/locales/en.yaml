@@ -1,0 +1,27 @@
+language:
+    name: English
+
+message:
+    html:
+        asks: |
+            <div class='h1'>
+                {from}
+            </div>
+            <div class='h5 align-self-center'>
+                asks
+            </div>
+            <div class='h1'>
+                {to}
+            </div>
+
+    no-names-provided: No names are provided
+    edit-names: Edit Names
+
+button:
+    back: Back
+    next: Next
+    edit-names: Edit Names
+    remove: Remove
+    add: Add
+    reset: Reset
+    save-changes: Save Changes

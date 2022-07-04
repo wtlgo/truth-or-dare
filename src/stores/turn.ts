@@ -3,6 +3,7 @@ import { build } from "@/utility/build";
 
 export const useTurnStore = defineStore({
     id: "turn",
+    persist: true,
 
     state() {
         return {
@@ -50,6 +51,4 @@ export const useTurnStore = defineStore({
             if (value >= 0 && value < this.len) this.counter = value;
         },
     },
-
-    persist: true,
 });

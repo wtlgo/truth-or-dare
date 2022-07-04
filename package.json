@@ -14,9 +14,11 @@
         "pinia": "^2.0.14",
         "pinia-plugin-persistedstate": "^1.6.1",
         "vue": "^3.2.37",
+        "vue-i18n": "9",
         "vue-router": "^4.0.16"
     },
     "devDependencies": {
+        "@modyfi/vite-plugin-yaml": "^1.0.2",
         "@rushstack/eslint-patch": "^1.1.0",
         "@types/node": "^16.11.41",
         "@vitejs/plugin-vue": "^2.3.3",

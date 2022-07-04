@@ -13,7 +13,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">
-                        Edit Names
+                        {{ t("message.edit-names") }}
                     </h5>
                     <button
                         type="button"
@@ -38,7 +38,7 @@
                                     type="button"
                                     @click="remove(idx)"
                                 >
-                                    Remove
+                                    {{ t("button.remove") }}
                                 </button>
                             </div>
                         </div>
@@ -52,7 +52,7 @@
                                     type="button"
                                     @click="add"
                                 >
-                                    Add
+                                    {{ t("button.add") }}
                                 </button>
                             </div>
                         </div>
@@ -64,10 +64,10 @@
                         class="btn btn-secondary"
                         @click="reset"
                     >
-                        Reset
+                        {{ t("button.reset") }}
                     </button>
                     <button type="button" class="btn btn-primary" @click="save">
-                        Save changes
+                        {{ t("button.save-changes") }}
                     </button>
                 </div>
             </div>
@@ -78,6 +78,9 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import { useTurnStore } from "@/stores/turn";
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n();
 
 const turn = useTurnStore();
 const names = ref([...turn.names]);
