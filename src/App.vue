@@ -102,7 +102,7 @@ const counter = computed({
 const showAddNames = ref(false);
 
 watchEffect(async () => {
-    locale;
+    document.querySelector("html")?.setAttribute("lang", locale.value);
     document.title = t("title");
 });
 </script>
