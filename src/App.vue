@@ -6,6 +6,10 @@ html,
 #app {
     height: 100%;
 }
+
+* {
+    touch-action: manipulation;
+}
 </style>
 
 <template>
