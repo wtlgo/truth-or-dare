@@ -16,9 +16,9 @@
             </div>
         </div>
 
-        <div class="row" v-if="len">
+        <div class="row p-4" v-if="len">
             <div
-                class="col d-flex justify-content-evenly"
+                class="col d-flex flex-wrap justify-content-evenly"
                 v-html="
                     t('message.html.asks', {
                         from: pair.from,
