@@ -69,7 +69,7 @@
 <script setup lang="ts">
 import { useTurnStore } from "./stores/turn";
 import AddNames from "./components/AddNames.vue";
-import { computed, ref, watch, watchEffect } from "vue";
+import { computed, ref, watchEffect } from "vue";
 import { useI18n } from "vue-i18n";
 import ChangeLanguage from "./components/ChangeLanguage.vue";
 
