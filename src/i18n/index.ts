@@ -19,4 +19,9 @@ const i18n = createI18n({
     messages,
 });
 
+export const setLocale = (locale: string) => {
+    sessionStorage.setItem("locale", locale);
+    i18n.global.locale.value = locale;
+};
+
 export default i18n;

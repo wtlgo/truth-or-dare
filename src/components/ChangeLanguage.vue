@@ -11,6 +11,7 @@
 </template>
 
 <script setup lang="ts">
+import { setLocale } from "@/i18n";
 import { computed } from "vue";
 import { useI18n } from "vue-i18n";
 
@@ -18,9 +19,6 @@ const { t, locale, availableLocales } = useI18n();
 
 const clocale = computed({
     get: () => locale.value,
-    set: (value) => {
-        sessionStorage.setItem("locale", value);
-        locale.value = value;
-    },
+    set: (value) => setLocale(value),
 });
 </script>
