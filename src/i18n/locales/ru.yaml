@@ -1,6 +1,8 @@
 language:
     name: Русский
 
+title: Правда или Действие
+
 message:
     html:
         asks: |

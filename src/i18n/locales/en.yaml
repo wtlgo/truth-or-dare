@@ -1,6 +1,8 @@
 language:
     name: English
 
+title: Truth Or Dare
+
 message:
     html:
         asks: |
