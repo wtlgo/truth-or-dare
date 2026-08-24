@@ -1,7 +1,9 @@
 language:
     name: English
 
-title: Truth Or Dare
+title: Truth or Dare
+asks: asks
+placeholder: New name
 
 message:
     html:

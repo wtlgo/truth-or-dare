@@ -2,6 +2,8 @@ language:
     name: Русский
 
 title: Правда или Действие
+asks: спрашивает
+placeholder: Новое имя
 
 message:
     html:
@@ -16,14 +18,14 @@ message:
                 {to}
             </div>
 
-    no-names-provided: Нет имен
-    edit-names: Редактировать Имена
+    no-names-provided: Нет имён
+    edit-names: Редактировать имена
 
 button:
     back: Назад
     next: Далее
-    edit-names: Редактировать Имена
+    edit-names: Редактировать имена
     remove: Удалить
     add: Добавить
     reset: Сбросить
-    save-changes: Сохранить Изменения
+    save-changes: Сохранить изменения

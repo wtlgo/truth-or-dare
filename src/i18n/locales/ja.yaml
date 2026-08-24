@@ -1,17 +1,19 @@
 language:
     name: 日本語
 
-title: トゥルース・オア・デラ
+title: トゥルース・オア・デア
+asks: 聞きます
+placeholder: 新しい名前
 
 message:
     html:
         asks: |
             <div class='h1'>
-                {from}<span class='h5 align-self-center'>が<span>
+                {from}<span class='h5 align-self-center'>が</span>
             </div>
 
             <div class='h1'>
-                {to}<span class='h5 align-self-center'>に<span>
+                {to}<span class='h5 align-self-center'>に</span>
             </div>
 
             <div class='h5 align-self-center'>
@@ -19,13 +21,13 @@ message:
             </div>
 
     no-names-provided: 名前はありません
-    edit-names: 名前を編集します
+    edit-names: 名前を編集する
 
 button:
     back: 戻る
-    next: 継続する
-    edit-names: 名前を編集します
-    remove: 削除する
+    next: 次へ
+    edit-names: 名前を編集する
+    remove: 削除
     add: 追加
     reset: リセット
-    save-changes: 変更内容を保存
+    save-changes: 変更を保存
