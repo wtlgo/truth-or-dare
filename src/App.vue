@@ -52,10 +52,24 @@
                 <div class="progress-label">{{ progressLabel }}</div>
             </div>
             <div class="nav-row">
-                <button class="btn-back" @click="turn.back">
+                <button
+                    v-if="turn.counter <= 0"
+                    class="btn-back"
+                    @click="turn.setCounter(len - 1)"
+                >
+                    {{ t("button.reset") }}
+                </button>
+                <button v-else class="btn-back" @click="turn.back">
                     {{ t("button.back") }}
                 </button>
-                <button class="btn-next" @click="turn.next">
+                <button
+                    v-if="turn.counter >= len - 1"
+                    class="btn-next"
+                    @click="turn.setCounter(0)"
+                >
+                    {{ t("button.reset") }}
+                </button>
+                <button v-else class="btn-next" @click="turn.next">
                     {{ t("button.next") }}
                 </button>
             </div>
