@@ -2,6 +2,8 @@ language:
     name: Українська
 
 title: Правда чи Дія
+asks: питає
+placeholder: Нове ім'я
 
 message:
     html:
@@ -16,14 +18,14 @@ message:
                 {to}
             </div>
 
-    no-names-provided: Нема Імен
-    edit-names: Редагувати Імена
+    no-names-provided: Немає імен
+    edit-names: Редагувати імена
 
 button:
     back: Назад
     next: Далі
-    edit-names: Редагувати Імена
+    edit-names: Редагувати імена
     remove: Видалити
     add: Додати
     reset: Скинути
-    save-changes: Зберегти Зміни
+    save-changes: Зберегти зміни

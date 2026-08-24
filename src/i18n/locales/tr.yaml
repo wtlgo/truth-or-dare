@@ -1,31 +1,33 @@
 language:
     name: Türkçe
 
-title: Doğruluk mu, cesaret mi
+title: Doğruluk mu Cesaret mi
+asks: soruyor
+placeholder: Yeni isim
 
 message:
     html:
         asks: |
             <div class='h1'>
-                {from}<span class='h5 align-self-center'>,<span>
+                {from}<span class='h5 align-self-center'>,</span>
             </div>
 
             <div class='h1'>
-                {to}<span class='h5 align-self-center'>'a/e<span>
+                {to}<span class='h5 align-self-center'>'a/e</span>
             </div>
 
             <div class='h5 align-self-center'>
                 soruyor
             </div>
 
-    no-names-provided: İsimler Yok
-    edit-names: İsimleri Değiştir
+    no-names-provided: İsim yok
+    edit-names: İsimleri düzenle
 
 button:
     back: Geri
-    next: Devam
-    edit-names: İsimleri Değiştir
+    next: İleri
+    edit-names: İsimleri düzenle
     remove: Sil
     add: Ekle
     reset: Sıfırla
-    save-changes: Kaydet
+    save-changes: Değişiklikleri kaydet
