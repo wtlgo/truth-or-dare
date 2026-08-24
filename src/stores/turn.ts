@@ -1,8 +1,7 @@
 import { defineStore } from "pinia";
 import { build } from "@/utility/build";
 
-export const useTurnStore = defineStore({
-    id: "turn",
+export const useTurnStore = defineStore("turn", {
     persist: true,
 
     state() {
@@ -27,7 +26,7 @@ export const useTurnStore = defineStore({
             }));
         },
 
-        len() {
+        len(): number {
             return this.pairs.length;
         },
     },
