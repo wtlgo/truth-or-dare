@@ -6,17 +6,7 @@ asks: asks
 placeholder: New name
 
 message:
-    html:
-        asks: |
-            <div class='h1'>
-                {from}
-            </div>
-            <div class='h5 align-self-center'>
-                asks
-            </div>
-            <div class='h1'>
-                {to}
-            </div>
+    asks: "{from} asks {to}"
 
     no-names-provided: No names are provided
     edit-names: Edit Names

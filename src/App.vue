@@ -17,11 +17,22 @@
 
         <main class="main">
             <template v-if="len > 0">
-                <div :key="pairKey" class="pair">
-                    <div class="pair-name">{{ pair.from }}</div>
-                    <div class="pair-label">{{ t("asks") }}</div>
-                    <div class="pair-name">{{ pair.to }}</div>
-                </div>
+                <i18n-t
+                    :key="pairKey"
+                    keypath="message.asks"
+                    tag="div"
+                    class="pair"
+                >
+                    <template #from>
+                        <span class="pair-name">{{ pair.from }}</span>
+                    </template>
+                    <template #to>
+                        <span class="pair-name">{{ pair.to }}</span>
+                    </template>
+                    <template #suffix>{{
+                        turkishDative(pair.to)
+                    }}</template>
+                </i18n-t>
             </template>
             <template v-else>
                 <div class="empty">
@@ -87,6 +98,21 @@ import { computed, ref, watchEffect } from "vue";
 import { useI18n } from "vue-i18n";
 
 const { t, locale } = useI18n();
+
+function turkishDative(name: string): string {
+    const lower = name.toLowerCase();
+    let useA = false;
+    for (let i = lower.length - 1; i >= 0; i--) {
+        if ("aıou".includes(lower[i])) {
+            useA = true;
+            break;
+        }
+        if ("eiöü".includes(lower[i])) break;
+    }
+    const vowel = useA ? "a" : "e";
+    const endsWithVowel = "aeıioöuü".includes(lower[lower.length - 1]);
+    return `'${endsWithVowel ? "y" : ""}${vowel}`;
+}
 
 const turn = useTurnStore();
 const pair = computed(() => turn.pairs[turn.counter]);
@@ -213,6 +239,11 @@ watchEffect(async () => {
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #12b886;
 }
 
 .pair-name {
@@ -221,15 +252,8 @@ watchEffect(async () => {
     letter-spacing: -0.04em;
     line-height: 1;
     text-wrap: balance;
-}
-
-.pair-label {
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: #12b886;
-    padding: 2px 0;
+    text-transform: none;
+    color: #f4f2ee;
 }
 
 .empty {

@@ -6,17 +6,7 @@ asks: питає
 placeholder: Нове ім'я
 
 message:
-    html:
-        asks: |
-            <div class='h1'>
-                {from}
-            </div>
-            <div class='h5 align-self-center'>
-                питає
-            </div>
-            <div class='h1'>
-                {to}
-            </div>
+    asks: "{from} питає {to}"
 
     no-names-provided: Немає імен
     edit-names: Редагувати імена
