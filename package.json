@@ -2,6 +2,7 @@
     "name": "truth-or-dare",
     "version": "0.0.0",
     "type": "module",
+    "packageManager": "pnpm@11.22.0",
     "scripts": {
         "dev": "vite",
         "build": "run-p type-check build-only",
